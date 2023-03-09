@@ -1,19 +1,41 @@
-# 🛠️Flutter project
+# 🛠️플러터 프로젝트
 
-<br>
+## 시작하기 전에...
 
 - ⚙️INSTALLATION 참고
--
+- flutter doctor 로 파일 생성시 문제가 없는지 issue check
+- powershell 에서 flutter create projectName
+- projectName 은 [Naming 규칙](https://dart.dev/tools/pub/pubspec#name)을 따라야 함
+- Vscode를 바로 실행하면 간혹 AVD가 켜지지 않으므로 powershell 에서 `code .` 를 사용해야 함
 
-## Getting Started
+<br/>
+<br/>
+<hr/>
 
-This project is a starting point for a Flutter application.
+###### 20230309
 
-A few resources to get you started if this is your first Flutter project:
+## Android Virtual Device 켜기
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src ="md_resource\resource_1.png"/>
+<br/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 우측 하단의 장치 탭이 켜지는지 확인
+- 켜지지 않았다면 [참고](#시작하기-전에)
+
+<br/>
+<img src ="md_resource\resource_2.png" width="100"/>
+<br/>
+
+- 우측 상단의 debug 창을 눌러서 작동
+
+<br/>
+<img src ="md_resource\resource_4.png" width="400"/>
+<br/>
+
+- 디버깅 실행 시 상단의 화면이 나오며 세부사항을 건들 수 있음
+
+<br/>
+<img src ="md_resource\resource_3.png" width="400"/>
+<br/>
+
+- 완벽히 부팅 됐을 시 모습, counter도 작동한다.
