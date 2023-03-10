@@ -39,3 +39,18 @@
 <br/>
 
 - 완벽히 부팅 됐을 시 모습, counter도 작동한다.
+
+<br/>
+<hr/>
+
+###### 20230310
+
+## Widget 이란...?
+
+<br/>
+
+- widget 은 flutter 내에서 UI를 만들기 위한 레고 블럭과 같음
+- flutter는 widget이 여러개가 모여 만들어짐
+
+- runApp 은 기본적으로 Widget을 args로 가짐 (App class를 Widget으로 만들어 주어야 함)
+- class를 Widget으로 만들어 주기 위해서는 flutter SDK의 3가지 core 중 하나를 사용해 주어야 함 (그 중 하나인 StatelessWidget)
