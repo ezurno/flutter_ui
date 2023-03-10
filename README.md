@@ -54,3 +54,30 @@
 
 - runApp 은 기본적으로 Widget을 args로 가짐 (App class를 Widget으로 만들어 주어야 함)
 - class를 Widget으로 만들어 주기 위해서는 flutter SDK의 3가지 core 중 하나를 사용해 주어야 함 (그 중 하나인 StatelessWidget)
+
+<br/>
+<img src ="md_resource\resource_5.png" width="400"/>
+<br/>
+
+- Material style 에 바로 text 를 작성한 모습
+- widget을 수납하기 위한 Scaffold를 사용해 주어야 함
+
+<br/>
+<img src ="md_resource\resource_6.png" width="400"/>
+<br/>
+
+- Scaffold를 사용해 text를 나타냄
+- 상단 고정바가 없어서 text가 잘려서 나타남
+
+<br/>
+<img src ="md_resource\resource_7.png" width="400"/>
+<br/>
+
+- AppBar를 넣어서 상단 고정바를 추가해 줌
+
+<br/>
+<img src ="md_resource\resource_8.png" width="400"/>
+<br/>
+
+- 글씨를 가운데로 쓰는 것도 Widget이며 text를 작성하는 것도 Widget임
+- Widget의 사용법을 익히는데 도움이 됨
