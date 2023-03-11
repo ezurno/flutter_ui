@@ -105,3 +105,40 @@
   - all : 모든 4방면에 padding
   - symetric : vertical, horizontal 중 하나
   - only : 한 방면
+
+<br/>
+<hr/>
+
+###### 20230311
+
+## Developer Tool 설정 맛보기
+
+<br/>
+<img src ="md_resource\resource_10.png" width="100"/>
+<br/>
+
+- 개발자 도구를 열고 싶다면 Debug 상단 바의 우측 버튼을 클릭
+
+<br/>
+<img src ="md_resource\resource_11.png" width="400"/>
+<br/>
+
+- 부모 자식의 관계나 Text, 상세설정 등을 볼 수 있음
+
+<br/>
+<img src ="md_resource\resource_12.png" width="400"/>
+<br/>
+
+- 상세설정 중에서 직접 값을 변경 할 수 있음
+
+<br/>
+<img src ="md_resource\resource_13.png" width="50"/>
+<br/>
+
+- AVD 의 Widget을 직접 눌러서 세팅을 볼 수 있음
+
+<br/>
+<img src ="md_resource\resource_14.png" width="400"/>
+<br/>
+
+- 격자식으로 AVD의 Widget 을 모아서 볼 수 있음
