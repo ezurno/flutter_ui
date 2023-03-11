@@ -81,3 +81,27 @@
 
 - 글씨를 가운데로 쓰는 것도 Widget이며 text를 작성하는 것도 Widget임
 - Widget의 사용법을 익히는데 도움이 됨
+
+<br/>
+<hr/>
+
+###### 20230311
+
+## Header 만들기
+
+<br/>
+
+- Color를 사용할 때 여러 방식이 있지만 ( 0xFF code ) 를 이용해 **#codeColor**를 사용할 수 있음
+- SizeBox 는 칸을 차지하는 특정 Box
+- Row 와 Column Widget을 이용해 child Widget의 배열 위치를 바꿀 수 있음
+- `css` 처럼 Axis 방향을 정해 배열 할 수 있음
+
+<br/>
+<img src ="md_resource\resource_9.png" width="400"/>
+<br/>
+
+- Margin Widget 을 이용해 간격을 벌린 모습.
+- padding 의 **EdgeInsets** 의 여러 속성이 있으므로 참고 (all, symetric ...)
+  - all : 모든 4방면에 padding
+  - symetric : vertical, horizontal 중 하나
+  - only : 한 방면
