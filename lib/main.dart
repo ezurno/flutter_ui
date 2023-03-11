@@ -12,16 +12,47 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text("Hello flutter!"),
+        backgroundColor: Color(0xFF181818), // Color를 0xFF로 #color 를 지정할 수 있음
+        body: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: 20), // symetric은 padding의 위치를 따로 지정 가능
+          child: Column(
+            children: [
+              SizedBox(
+                height: 80,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                // css 의 axis 개념과 유사함
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        "Hey, Lee",
+                        style: TextStyle(
+                          // Text Widget 내 style로 지정 가능
+                          color: Colors.white,
+                          fontSize: 36,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      Text(
+                        "Welcome back",
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.5),
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
-        body: Center(
-          child: Text("Hello world!"),
-        ),
       ),
-    ); // build 는 Material (*google) 과 Cupertino (*ios) 중 하나를 반환 해야 함
+    );
   }
 }
 
