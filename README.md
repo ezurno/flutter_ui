@@ -2,6 +2,7 @@
 
 ## 시작하기 전에...
 
+- **Flutter**는 **Dart**를 사용하므로 [다트 문법 다시보기](https://github.com/ezurno/dart-learn)
 - ⚙️INSTALLATION 참고
 - flutter doctor 로 파일 생성시 문제가 없는지 issue check
 - powershell 에서 flutter create projectName
