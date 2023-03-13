@@ -7,19 +7,22 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   // Widget 이 된 App은 StatelessWidget의 규칙을 따라야 함 => build를 생성해야 함
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818), // Color를 0xFF로 #color 를 지정할 수 있음
+        backgroundColor:
+            const Color(0xFF181818), // Color를 0xFF로 #color 를 지정할 수 있음
         body: Padding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
               horizontal: 20), // symetric은 padding의 위치를 따로 지정 가능
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Row(
@@ -29,7 +32,7 @@ class App extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
+                      const Text(
                         "Hey, Lee",
                         style: TextStyle(
                           // Text Widget 내 style로 지정 가능
@@ -49,7 +52,7 @@ class App extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Text(
@@ -59,10 +62,10 @@ class App extends StatelessWidget {
                   fontSize: 22,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                 "\$ 5 642 375",
                 style: TextStyle(
                   color: Colors.white,
@@ -70,7 +73,7 @@ class App extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -81,7 +84,7 @@ class App extends StatelessWidget {
                       borderRadius: BorderRadius.circular(45),
                       color: Colors.amber,
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 50,
