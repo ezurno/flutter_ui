@@ -175,12 +175,12 @@
 <br/>
 <img src ="md_resources\resource_16.png" width="400"/>
 
-- flutter 사용시 **children**이 많아지면 보기 불편함
+- flutter 사용시 **children**이 많아지면 보기 불편함 \> setting.json 에 명렁어 추가
 
 <br/>
 <img src ="md_resources\resource_17.png" width="400"/>
 
-- \> setting.json 에 명렁어 추가
+- children 을 관리하기 편하게 줄이 생긴 모습
 
 ```JSON
   "dart.previewFlutterUiGuides": true,
