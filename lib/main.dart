@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_motoons/widgets/button.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
   // runApp 은 Widget을 args로 갖는다.
   // flutter 의 관점에서 Widget 이란 UI를 만드는 레고블럭 같은 것.
 }
@@ -76,27 +77,17 @@ class App extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    // Container 는 div 와 비슷함 style을 줄땐 decoration으로 줌
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(45),
-                      color: Colors.amber,
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 50,
-                      ),
-                      child: Text(
-                        "Transfer",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  )
+                  Button(
+                      textColor: Colors.black,
+                      text: "Transfer",
+                      bgColor: Colors.amber),
+                  Button(
+                      textColor: Colors.white70,
+                      text: "Request",
+                      bgColor: Color(0xFF1F2123))
                 ],
               ),
             ],
