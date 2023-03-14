@@ -10,7 +10,6 @@
 - Vscode를 바로 실행하면 간혹 AVD가 켜지지 않으므로 powershell 에서 `code .` 를 사용해야 함
 
 <br/>
-<br/>
 <hr/>
 
 ###### 20230309
@@ -189,3 +188,78 @@
     "source.fixAll": true
   }
 ```
+
+<br/>
+<br/>
+<img src ="md_resources\resource_19.png" width="200"/>
+<br/>
+<br/>
+<img src ="md_resources\resource_18.png" width="400"/>
+<br/>
+<br/>
+
+- 해당 extension 을 설치하면 AVG 에서 화면이 잘리는걸 예방 할 수 있음
+- code 상에서도 오류가 나는 부분을 빨간표시로 보기 편하게 해줌
+
+<br/>
+<hr/>
+
+###### 20230313
+
+## 재사용 가능한 Widget 만들기
+
+<br/>
+
+- 비슷한 여러 버튼을 생성 \>\> **Reusable Widget** 사용
+- Dart 에서 쓰는 class 문법으로 생성자를 이용해 생성
+
+<br/>
+
+```DART
+import 'package:flutter/material.dart';
+
+class Button extends StatelessWidget {
+  // class 를 widget으로 바꿔주기 위한 extend
+  final Color textColor;
+  final String text;
+  final Color bgColor;
+
+  const Button(
+      {super.key,
+      required this.textColor,
+      required this.text,
+      required this.bgColor});
+
+  @override
+  Widget build(BuildContext context) {
+    // 모든 widget엔 bulid 가 존재해야함
+
+    return Container(
+      // Container 는 div 와 비슷함 style을 줄땐 decoration으로 줌
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(45),
+        color: bgColor,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 20,
+          horizontal: 50,
+        ),
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: 20,
+            color: textColor,
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+<br/>
+<br/>
+<img src ="md_resources\resource_20.png" width="400"/>
+
+- **Reusable Widget** 을 사용한 모습
