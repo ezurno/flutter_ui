@@ -14,7 +14,7 @@
 
 ###### 20230309
 
-## Android Virtual Device 켜기
+> ## Android Virtual Device 켜기
 
 <img src ="md_resources\resource_1.png"/>
 <br/>
@@ -45,7 +45,7 @@
 
 ###### 20230310
 
-## Widget 이란...?
+> ## Widget 이란...?
 
 <br/>
 
@@ -87,7 +87,7 @@
 
 ###### 20230311
 
-## Header 만들기
+> ## Header 만들기
 
 <br/>
 
@@ -111,7 +111,7 @@
 
 ###### 20230311
 
-## Developer Tool 설정 맛보기
+> ## Developer Tool 설정 맛보기
 
 <br/>
 <img src ="md_resources\resource_10.png" width="100"/>
@@ -148,7 +148,7 @@
 
 ###### 20230313
 
-## Container 로 버튼 만들기
+> ## Container 로 버튼 만들기
 
 <br/>
 
@@ -164,7 +164,7 @@
 
 ###### 20230313
 
-## VSCode Setting 하기
+> ## VSCode Setting 하기
 
 <br/>
 
@@ -206,7 +206,7 @@
 
 ###### 20230314
 
-## 재사용 가능한 Widget 만들기
+> ## 재사용 가능한 Widget 만들기
 
 <br/>
 
@@ -263,3 +263,92 @@ class Button extends StatelessWidget {
 <img src ="md_resources\resource_20.png" width="400"/>
 
 - **Reusable Widget** 을 사용한 모습
+
+<br/>
+<hr/>
+
+###### 20230315
+
+> ## Icon, Transform, Scroll 사용하기
+
+## Icon
+
+<br/>
+<img src ="md_resources\resource_21.png" width="400"/>
+<br/>
+<br/>
+
+- 우측에 **Icon** 을 만들어주기 위해 **Card** 생성
+
+<br/>
+<img src ="md_resources\resource_22.png" width="400"/>
+<br/>
+<img src ="md_resources\resource_23.png" width="400"/>
+
+<br/>
+<br/>
+
+- **Icon** 탭을 잘 찾아보면 여러가지 **flutter**에서 제공하는 아이콘을 볼 수 있음
+- 그 중에서 **Euro** 에 해당하는 아이콘을 찾아 적용
+
+<br/>
+<hr/>
+
+## Transform
+
+<br/>
+<img src ="md_resources\resource_24.png" height="150"/>
+<br/>
+<br/>
+
+- 아이콘을 넣었지만 아이콘 크기를 담는 **Card**는 그대로 두고 아이콘 크기만 늘리고 싶음 >> **Transform 사용**
+- **Transform**은 형태는 유지하되 특정 **Widget**만 개별적으로 변형을 주고싶을 때 사용
+
+<br/>
+<img src ="md_resources\resource_25.png" height="150"/>
+<br/>
+<br/>
+
+- 넘치는 아이콘을 **CSS** 의 `overflow: hidden` 처럼 숨기고 싶음
+- `clipBehavior: Clip.hardEdge` 를 사용해 화면이 넘어갔을 시 어떻게 처리해야 할지 정의 함
+
+<br/>
+<hr/>
+
+## Scroll
+
+<br/>
+<img src ="md_resources\resource_26.png" width="400"/>
+<br/>
+<br/>
+
+- widget을 사용해 여러가지 card를 생성하니 화면 y 축이 넘어가서 에러가 발생
+- 사이즈를 맞추거나 스크롤이 가능하게 끔 적용 하는게 방법.
+- **Widget**을 `SingleChildScrollView` 로 감싸주면 됨
+
+<br/>
+
+```DART
+ Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor:
+            const Color(0xFF181818),
+        body: SingleChildScrollView(
+          child: Padding(
+            // 중략
+```
+
+<br/>
+<img src ="md_resources\resource_27.png" width="400"/>
+<br/>
+<br/>
+
+- 적용이 되어 스크롤이 가능해 에러가 사라진 모습
+
+<br/>
+<img src ="md_resources\resource_28.png" width="400"/>
+<br/>
+<br/>
+
+- **Card** 를 겹쳐지게 하기 위해 **currency_card** 에 순서 값을 주어 `Transform.translate`를 적용해 주었다.
