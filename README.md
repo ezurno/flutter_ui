@@ -292,7 +292,6 @@ class Button extends StatelessWidget {
 - 그 중에서 **Euro** 에 해당하는 아이콘을 찾아 적용
 
 <br/>
-<hr/>
 
 ## Transform
 
@@ -313,7 +312,6 @@ class Button extends StatelessWidget {
 - `clipBehavior: Clip.hardEdge` 를 사용해 화면이 넘어갔을 시 어떻게 처리해야 할지 정의 함
 
 <br/>
-<hr/>
 
 ## Scroll
 
