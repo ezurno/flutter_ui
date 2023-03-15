@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_motoons/widgets/button.dart';
+import 'package:flutter_motoons/widgets/currency_card.dart';
 
 void main() {
   runApp(const App());
@@ -117,74 +118,11 @@ class App extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Container(
-                clipBehavior: Clip.hardEdge, // overflow : hidden
-                // clipBehavior는 화면이 넘어갔을 시 어떻게 처리해야 할지 알려줌
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1F2123),
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 20,
-                    horizontal: 30,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            "Euro",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 32,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                "6 213",
-                                style: TextStyle(
-                                  color: Colors.white.withOpacity(0.8),
-                                  fontSize: 24,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              Text("EUR",
-                                  style: TextStyle(
-                                    color: Colors.white.withOpacity(0.8),
-                                    fontSize: 18,
-                                  )),
-                            ],
-                          )
-                        ],
-                      ),
-                      Transform.scale(
-                        // 배율로 키우기
-                        scale: 2,
-                        child: Transform.translate(
-                          // 이동
-                          offset: const Offset(5, 15),
-                          child: const Icon(
-                            Icons.euro_rounded,
-                            color: Colors.white,
-                            size: 88,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              )
+              const CurrencyCard(
+                  name: "Euro",
+                  amount: "6 428",
+                  code: "EUR",
+                  icon: Icons.euro_rounded),
             ],
           ),
         ),
