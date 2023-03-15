@@ -118,6 +118,8 @@ class App extends StatelessWidget {
                 height: 15,
               ),
               Container(
+                clipBehavior: Clip.hardEdge, // overflow : hidden
+                // clipBehavior는 화면이 넘어갔을 시 어떻게 처리해야 할지 알려줌
                 decoration: BoxDecoration(
                   color: const Color(0xFF1F2123),
                   borderRadius: BorderRadius.circular(25),
@@ -128,6 +130,7 @@ class App extends StatelessWidget {
                     horizontal: 30,
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,25 +147,39 @@ class App extends StatelessWidget {
                             height: 10,
                           ),
                           Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Text(
-                                "6,213",
+                                "6 213",
                                 style: TextStyle(
                                   color: Colors.white.withOpacity(0.8),
                                   fontSize: 24,
                                 ),
                               ),
                               const SizedBox(
-                                width: 5,
+                                width: 20,
                               ),
                               Text("EUR",
                                   style: TextStyle(
                                     color: Colors.white.withOpacity(0.8),
-                                    fontSize: 24,
+                                    fontSize: 18,
                                   )),
                             ],
                           )
                         ],
+                      ),
+                      Transform.scale(
+                        // 배율로 키우기
+                        scale: 2,
+                        child: Transform.translate(
+                          // 이동
+                          offset: const Offset(5, 15),
+                          child: const Icon(
+                            Icons.euro_rounded,
+                            color: Colors.white,
+                            size: 88,
+                          ),
+                        ),
                       )
                     ],
                   ),
